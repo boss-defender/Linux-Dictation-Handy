@@ -287,6 +287,8 @@ For a system such as a Ryzen 7 7700 with 16 GB RAM and no dedicated GPU, Parakee
 
 ---
 
+## **No need to read the rest if you get no trouble**
+
 # 9. Select your microphone
 
 In Handy's audio/microphone settings:
