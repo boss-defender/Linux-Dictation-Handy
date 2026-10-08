@@ -25,6 +25,9 @@ sudo dnf install -y git gcc-c++ meson ninja-build pkgconf-pkg-config qt6-qtbase-
 ```bash
 sudo dnf install wtype -y
 ```
+**And move to Step 4 to install the handy**
+
+---
 
 ## Or, Download, build, and install KWtype if KDE Wayland :
 
