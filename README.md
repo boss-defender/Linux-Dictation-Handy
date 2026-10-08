@@ -57,7 +57,7 @@ sudo meson install -C build
 
 ## 3. Verify KWtype
 
-Check whether Fedora can find it:
+Check whether Fedora can find KWtype:
 
 ```bash
 command -v kwtype
@@ -69,7 +69,7 @@ Expected:
 /usr/local/bin/kwtype
 ```
 
-Check that KWtype works:
+Check that KWtype runs:
 
 ```bash
 kwtype --help
@@ -77,45 +77,51 @@ kwtype --help
 
 ### If `command -v kwtype` returns nothing
 
-First check:
+First check whether KWtype exists:
 
 ```bash
 ls -l /usr/local/bin/kwtype
 ```
 
-If the file exists but Fish cannot find it, add `/usr/local/bin` to Fish's PATH:
+If the file exists, add `/usr/local/bin` to your shell's `PATH`.
+
+**Bash:**
+
+```bash
+echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
+```
+
+**Zsh / Oh My Zsh:**
+
+```bash
+echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
+```
+
+**Fish:**
 
 ```fish
 fish_add_path /usr/local/bin
 ```
 
-Then restart the terminal and check again:
+Then verify again:
 
 ```bash
 command -v kwtype
 ```
 
-If KWtype was accidentally installed into `~/.local/bin` instead, use:
+Expected:
 
-```fish
-fish_add_path ~/.local/bin
+```text
+/usr/local/bin/kwtype
 ```
 
-Then check:
+### Test KWtype
 
-```bash
-command -v kwtype
-```
+Open Kate, Firefox, Chrome, or another application with a text field.
 
-You want this to return the actual KWtype executable.
-
-### Test KWtype directly
-
-Open **Kate**, **Firefox**, **Chrome**, or any application with a text field.
-
-Click inside the text field.
-
-Then run:
+Click inside the text field, then run:
 
 ```bash
 kwtype "Hello from KWtype on Fedora KDE Wayland"
@@ -123,7 +129,7 @@ kwtype "Hello from KWtype on Fedora KDE Wayland"
 
 The text should appear in the focused text field.
 
-> **Do not continue to Handy until this test works.**
+> **Do not continue until this test works.**
 
 ---
 
