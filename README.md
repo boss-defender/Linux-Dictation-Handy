@@ -88,14 +88,14 @@ If the file exists, add `/usr/local/bin` to your shell's `PATH`.
 **Bash:**
 
 ```bash
-echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bashrc
+grep -qxF 'export PATH="/usr/local/bin:$PATH"' ~/.bashrc || echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
 ```
 
 **Zsh / Oh My Zsh:**
 
 ```bash
-echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.zshrc
+grep -qxF 'export PATH="/usr/local/bin:$PATH"' ~/.zshrc || echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.zshrc
 source ~/.zshrc
 ```
 
