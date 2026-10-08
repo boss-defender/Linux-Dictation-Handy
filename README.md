@@ -10,7 +10,7 @@ This setup is designed for a **Fedora KDE Plasma Wayland** desktop where Handy n
 
 ---
 
-## 1. Install all KWtype dependencies
+## 1. Install all dependencies
 
 Copy and paste this **single command**:
 
@@ -20,7 +20,13 @@ sudo dnf install -y git gcc-c++ meson ninja-build pkgconf-pkg-config qt6-qtbase-
 
 ---
 
-## 2. Download, build, and install KWtype
+##  2. Install wtype if not KDE Wayland :
+
+```bash
+sudo dnf install wtype -y
+```
+
+## Or, Download, build, and install KWtype if KDE Wayland :
 
 ### Download
 
